@@ -56,26 +56,9 @@
       <h1>加法計算</h1>
       <input type="number" id="num1" placeholder="第一個數字">
       <input type="number" id="num2" placeholder="第二個數字">
-      <button onclick="calculate()">計算</button>
+      <button onclick="document.getElementById('result').textContent = add(parseFloat(document.getElementById('num1').value), parseFloat(document.getElementById('num2').value))">計算</button>
       <div id="result"></div>
     </div>
     <script src="js/math.js"></script>
-    <script>
-      function calculate() {
-        var valA = document.getElementById('num1').value.trim();
-        var valB = document.getElementById('num2').value.trim();
-        if (valA === '' || valB === '') {
-          document.getElementById('result').textContent = '請輸入兩個數字';
-          return;
-        }
-        var a = parseFloat(valA);
-        var b = parseFloat(valB);
-        if (isNaN(a) || isNaN(b)) {
-          document.getElementById('result').textContent = '請輸入有效的數字';
-          return;
-        }
-        document.getElementById('result').textContent = a + ' + ' + b + ' = ' + add(a, b);
-      }
-    </script>
   </body>
 </html>
