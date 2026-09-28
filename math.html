@@ -62,8 +62,18 @@
     <script src="js/math.js"></script>
     <script>
       function calculate() {
-        var a = parseFloat(document.getElementById('num1').value) || 0;
-        var b = parseFloat(document.getElementById('num2').value) || 0;
+        var valA = document.getElementById('num1').value.trim();
+        var valB = document.getElementById('num2').value.trim();
+        if (valA === '' || valB === '') {
+          document.getElementById('result').textContent = '請輸入兩個數字';
+          return;
+        }
+        var a = parseFloat(valA);
+        var b = parseFloat(valB);
+        if (isNaN(a) || isNaN(b)) {
+          document.getElementById('result').textContent = '請輸入有效的數字';
+          return;
+        }
         document.getElementById('result').textContent = a + ' + ' + b + ' = ' + add(a, b);
       }
     </script>
