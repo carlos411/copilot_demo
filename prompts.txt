@@ -1,5 +1,0 @@
-Issue #1：加法
-在 math.html 檔當中，使用 add() 函式，計算加法的結果，呈現在頁面上。
-
-Commit (要有 @copilot )
-@copilot 你在 math.html 檔當中，calculate() 函式，但請移除，因為我本來就已經在 js/math.js 檔當中，已經寫好了 add() 函式，所以加法功能，直接使用這個就好了。再重新修正。
